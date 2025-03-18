@@ -1,9 +1,9 @@
-import DynamicTabs from "./components/tabs/dynamicTabs";
+import ParentTabs from "./components/tabs/parentTabs";
 
 function App() {
   return (
     <main className="flex justify-center items-center p-4">
-      <DynamicTabs />
+      <ParentTabs />
     </main>
   );
 }

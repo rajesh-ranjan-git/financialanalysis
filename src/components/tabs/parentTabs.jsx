@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Accordion from "../accordion/accordion";
+import { parentTabs } from "../../config/config";
 
-const ParentTabs = ({ parentTabs }) => {
+const ParentTabs = () => {
   const [parentActiveTab, setParentActiveTab] = useState(0);
 
   const handleTabChange = (currentParentTab) => {

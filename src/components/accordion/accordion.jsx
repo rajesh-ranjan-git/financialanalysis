@@ -1,40 +1,6 @@
 import React, { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-
-const chartHeadings = [
-  {
-    label: "Income Statement (₹ Cr.)",
-    chart1: "Rajesh",
-    chart2: "Ranjan",
-    chart3: "Abra ka Dabra",
-    chart4: "Gili Gili Choo",
-  },
-  {
-    label: "Balance Sheet (₹ Cr.)",
-    chart1: "Kripanidhan",
-    chart2: "Rahee",
-    chart3: "Vingardium",
-    chart4: "Laviosa",
-  },
-  {
-    label: "Cash Flow  (₹ Cr.)",
-    chart1: "Sayantanee",
-    chart2: "Mohanta",
-    chart3: "Expecto",
-    chart4: "Patronum",
-  },
-];
-
-const childTabs = [
-  {
-    id: "1",
-    label: "Quarterly",
-  },
-  {
-    id: "2",
-    label: "Annual",
-  },
-];
+import { chartHeadings, childTabs } from "../../config/config";
 
 const Accordion = ({ parentLabel }) => {
   const [acc, setAcc] = useState(null);
@@ -91,22 +57,30 @@ const Accordion = ({ parentLabel }) => {
 
                   {parentLabel.label === "Consolidated" &&
                     childActiveTab === 0 && (
-                      <div className="py-4">{heading.chart1}</div>
+                      <div className="py-4">
+                        {heading.consolidatedQuarterlyChart}
+                      </div>
                     )}
 
                   {parentLabel.label === "Consolidated" &&
                     childActiveTab === 1 && (
-                      <div className="py-4">{heading.chart2}</div>
+                      <div className="py-4">
+                        {heading.consolidatedAnnualChart}
+                      </div>
                     )}
 
                   {parentLabel.label === "Standalone" &&
                     childActiveTab === 0 && (
-                      <div className="py-4">{heading.chart3}</div>
+                      <div className="py-4">
+                        {heading.standaloneQuarterlyChart}
+                      </div>
                     )}
 
                   {parentLabel.label === "Standalone" &&
                     childActiveTab === 1 && (
-                      <div className="py-4">{heading.chart4}</div>
+                      <div className="py-4">
+                        {heading.standaloneAnnualChart}
+                      </div>
                     )}
                 </div>
               )}
