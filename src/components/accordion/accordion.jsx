@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-import { chartHeadings, childTabs } from "../../config/config";
+import { chartsData, childTabs } from "../../config/config";
 
 const Accordion = ({ parentLabel }) => {
   const [acc, setAcc] = useState(null);
@@ -20,7 +20,7 @@ const Accordion = ({ parentLabel }) => {
 
   return (
     <div className="flex flex-col items-center gap-5 rounded-md w-full">
-      {chartHeadings.map((heading, index) => (
+      {chartsData.map((heading, index) => (
         <div className="rounded-md rounded-b-none w-full" key={index}>
           <div
             className={`flex justify-between border border-neutral-300 rounded-md p-2 ${
@@ -58,28 +58,28 @@ const Accordion = ({ parentLabel }) => {
                   {parentLabel.label === "Consolidated" &&
                     childActiveTab === 0 && (
                       <div className="py-4">
-                        {heading.consolidatedQuarterlyChart}
+                        {heading.consolidatedQuarterlyIncomeStatement}
                       </div>
                     )}
 
                   {parentLabel.label === "Consolidated" &&
                     childActiveTab === 1 && (
                       <div className="py-4">
-                        {heading.consolidatedAnnualChart}
+                        {heading.consolidatedAnnualIncomeStatement}
                       </div>
                     )}
 
                   {parentLabel.label === "Standalone" &&
                     childActiveTab === 0 && (
                       <div className="py-4">
-                        {heading.standaloneQuarterlyChart}
+                        {heading.standaloneQuarterlyIncomeStatement}
                       </div>
                     )}
 
                   {parentLabel.label === "Standalone" &&
                     childActiveTab === 1 && (
                       <div className="py-4">
-                        {heading.standaloneAnnualChart}
+                        {heading.standaloneAnnualIncomeStatement}
                       </div>
                     )}
                 </div>

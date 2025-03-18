@@ -10,16 +10,16 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { consolidatedAnnualData } from "../../config/chartsData";
+import { consolidatedAnnualIncomeStatement } from "../../config/chartsData";
 
-const ConsolidatedAnnualBarChart = () => {
+const ConsolidatedAnnualIncomeStatement = () => {
   return (
     <div className="w-full h-[60vh]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={1000}
           height={600}
-          data={consolidatedAnnualData}
+          data={consolidatedAnnualIncomeStatement}
           barGap={10}
           className="w-full"
         >
@@ -61,4 +61,4 @@ const ConsolidatedAnnualBarChart = () => {
   );
 };
 
-export default ConsolidatedAnnualBarChart;
+export default ConsolidatedAnnualIncomeStatement;

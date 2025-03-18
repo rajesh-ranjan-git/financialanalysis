@@ -10,16 +10,16 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { consolidatedQuarterlyData } from "../../config/chartsData";
+import { standaloneAnnualIncomeStatement } from "../../config/chartsData";
 
-const ConsolidatedQuarterlyBarChart = () => {
+const StandaloneAnnualIncomeStatement = () => {
   return (
     <div className="w-full h-[60vh]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={1000}
           height={600}
-          data={consolidatedQuarterlyData}
+          data={standaloneAnnualIncomeStatement}
           barGap={10}
           className="w-full"
         >
@@ -61,4 +61,4 @@ const ConsolidatedQuarterlyBarChart = () => {
   );
 };
 
-export default ConsolidatedQuarterlyBarChart;
+export default StandaloneAnnualIncomeStatement;

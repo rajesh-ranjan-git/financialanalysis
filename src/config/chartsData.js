@@ -1,4 +1,4 @@
-export const consolidatedQuarterlyData = [
+export const consolidatedQuarterlyIncomeStatement = [
   {
     quarter: "Dec 2024",
     "Total Income": 63537.33,
@@ -21,7 +21,7 @@ export const consolidatedQuarterlyData = [
   },
 ];
 
-export const consolidatedAnnualData = [
+export const consolidatedAnnualIncomeStatement = [
   {
     year: 2024,
     "Total Income": 134728.6,
@@ -44,7 +44,7 @@ export const consolidatedAnnualData = [
   },
 ];
 
-export const standaloneQuarterlyData = [
+export const standaloneQuarterlyIncomeStatement = [
   {
     quarter: "Dec 2024",
     "Total Income": 45634.45,
@@ -67,7 +67,7 @@ export const standaloneQuarterlyData = [
   },
 ];
 
-export const standaloneAnnualData = [
+export const standaloneAnnualIncomeStatement = [
   {
     year: 2024,
     "Total Income": 183728.6,
@@ -87,5 +87,173 @@ export const standaloneAnnualData = [
     year: 2021,
     "Total Income": 157358.19,
     "Reported Profit After Tax": 3434.74,
+  },
+];
+
+export const consolidatedQuarterlyBalanceSheet = [
+  {
+    quarter: "Dec 2024",
+    "Total Assets": 5000,
+    "Total Shareholder's Fund": 2000,
+  },
+  {
+    quarter: "Sep 2024",
+    "Total Assets": 5200,
+    "Total Shareholder's Fund": 2100,
+  },
+  {
+    quarter: "Jun 2024",
+    "Total Assets": 5400,
+    "Total Shareholder's Fund": 2200,
+  },
+  {
+    quarter: "Mar 2024",
+    "Total Assets": 5600,
+    "Total Shareholder's Fund": 2300,
+  },
+];
+
+export const consolidatedAnnualBalanceSheet = [
+  { year: "2022", "Total Assets": 20000, "Total Shareholder's Fund": 8000 },
+  { year: "2023", "Total Assets": 22000, "Total Shareholder's Fund": 9000 },
+  { year: "2024", "Total Assets": 25000, "Total Shareholder's Fund": 10000 },
+  { year: "2025", "Total Assets": 28000, "Total Shareholder's Fund": 12000 },
+];
+
+export const standaloneQuarterlyBalanceSheet = [
+  {
+    quarter: "Dec 2024",
+    "Total Assets": 5000,
+    "Total Shareholder's Fund": 2000,
+  },
+  {
+    quarter: "Sep 2024",
+    "Total Assets": 5200,
+    "Total Shareholder's Fund": 2100,
+  },
+  {
+    quarter: "Jun 2024",
+    "Total Assets": 5400,
+    "Total Shareholder's Fund": 2200,
+  },
+  {
+    quarter: "Mar 2024",
+    "Total Assets": 5600,
+    "Total Shareholder's Fund": 2300,
+  },
+];
+
+export const standaloneAnnualBalanceSheet = [
+  { year: "2022", "Total Assets": 20000, "Total Shareholder's Fund": 8000 },
+  { year: "2023", "Total Assets": 22000, "Total Shareholder's Fund": 9000 },
+  { year: "2024", "Total Assets": 25000, "Total Shareholder's Fund": 10000 },
+  { year: "2025", "Total Assets": 28000, "Total Shareholder's Fund": 12000 },
+];
+
+export const consolidatedQuarterlyCashFlow = [
+  {
+    quarter: "Dec 2024",
+    "Net Cash from Operating Activities": 1200,
+    "Net Cash used in Investing Activities": -800,
+    "Net Cash used in Financing Activities": -500,
+  },
+  {
+    quarter: "Sep 2024",
+    "Net Cash from Operating Activities": 1100,
+    "Net Cash used in Investing Activities": -600,
+    "Net Cash used in Financing Activities": -400,
+  },
+  {
+    quarter: "Jun 2024",
+    "Net Cash from Operating Activities": 1000,
+    "Net Cash used in Investing Activities": -700,
+    "Net Cash used in Financing Activities": -450,
+  },
+  {
+    quarter: "Mar 2024",
+    "Net Cash from Operating Activities": 950,
+    "Net Cash used in Investing Activities": -500,
+    "Net Cash used in Financing Activities": -350,
+  },
+];
+
+export const consolidatedAnnualCashFlow = [
+  {
+    year: "2022",
+    "Net Cash from Operating Activities": 4500,
+    "Net Cash used in Investing Activities": -3000,
+    "Net Cash used in Financing Activities": -1500,
+  },
+  {
+    year: "2023",
+    "Net Cash from Operating Activities": 4800,
+    "Net Cash used in Investing Activities": -3100,
+    "Net Cash used in Financing Activities": -1600,
+  },
+  {
+    year: "2024",
+    "Net Cash from Operating Activities": 5000,
+    "Net Cash used in Investing Activities": -3200,
+    "Net Cash used in Financing Activities": -1700,
+  },
+  {
+    year: "2025",
+    "Net Cash from Operating Activities": 5200,
+    "Net Cash used in Investing Activities": -3300,
+    "Net Cash used in Financing Activities": -1800,
+  },
+];
+
+export const standaloneQuarterlyCashFlow = [
+  {
+    quarter: "Dec 2024",
+    "Net Cash from Operating Activities": 1200,
+    "Net Cash used in Investing Activities": -800,
+    "Net Cash used in Financing Activities": -500,
+  },
+  {
+    quarter: "Sep 2024",
+    "Net Cash from Operating Activities": 1100,
+    "Net Cash used in Investing Activities": -600,
+    "Net Cash used in Financing Activities": -400,
+  },
+  {
+    quarter: "Jun 2024",
+    "Net Cash from Operating Activities": 1000,
+    "Net Cash used in Investing Activities": -700,
+    "Net Cash used in Financing Activities": -450,
+  },
+  {
+    quarter: "Mar 2024",
+    "Net Cash from Operating Activities": 950,
+    "Net Cash used in Investing Activities": -500,
+    "Net Cash used in Financing Activities": -350,
+  },
+];
+
+export const standaloneAnnualCashFlow = [
+  {
+    year: "2022",
+    "Net Cash from Operating Activities": 4500,
+    "Net Cash used in Investing Activities": -3000,
+    "Net Cash used in Financing Activities": -1500,
+  },
+  {
+    year: "2023",
+    "Net Cash from Operating Activities": 4800,
+    "Net Cash used in Investing Activities": -3100,
+    "Net Cash used in Financing Activities": -1600,
+  },
+  {
+    year: "2024",
+    "Net Cash from Operating Activities": 5000,
+    "Net Cash used in Investing Activities": -3200,
+    "Net Cash used in Financing Activities": -1700,
+  },
+  {
+    year: "2025",
+    "Net Cash from Operating Activities": 5200,
+    "Net Cash used in Investing Activities": -3300,
+    "Net Cash used in Financing Activities": -1800,
   },
 ];

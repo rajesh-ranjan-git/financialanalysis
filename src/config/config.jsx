@@ -1,7 +1,7 @@
-import ConsolidatedAnnualBarChart from "../charts/consolidated/consolidatedAnnualBarChart";
-import ConsolidatedQuarterlyBarChart from "../charts/consolidated/consolidatedQuarterlyBarChart";
-import StandaloneAnnualBarChart from "../charts/standalone/standaloneAnnualBarChart";
-import StandaloneQuarterlyBarChart from "../charts/standalone/standaloneQuarterlyBarChart";
+import ConsolidatedQuarterlyIncomeStatement from "../charts/consolidated/consolidatedQuarterlyIncomeStatement";
+import ConsolidatedAnnualIncomeStatement from "../charts/consolidated/consolidatedAnnualIncomeStatement";
+import StandaloneQuarterlyIncomeStatement from "../charts/standalone/standaloneQuarterlyIncomeStatement";
+import StandaloneAnnualIncomeStatement from "../charts/standalone/standaloneAnnualIncomeStatement";
 
 export const parentTabs = [
   {
@@ -25,13 +25,15 @@ export const childTabs = [
   },
 ];
 
-export const chartHeadings = [
+export const chartsData = [
   {
     label: "Income Statement (₹ Cr.)",
-    consolidatedQuarterlyChart: <ConsolidatedQuarterlyBarChart />,
-    consolidatedAnnualChart: <ConsolidatedAnnualBarChart />,
-    standaloneQuarterlyChart: <StandaloneQuarterlyBarChart />,
-    standaloneAnnualChart: <StandaloneAnnualBarChart />,
+    consolidatedQuarterlyIncomeStatement: (
+      <ConsolidatedQuarterlyIncomeStatement />
+    ),
+    consolidatedAnnualIncomeStatement: <ConsolidatedAnnualIncomeStatement />,
+    standaloneQuarterlyIncomeStatement: <StandaloneQuarterlyIncomeStatement />,
+    standaloneAnnualIncomeStatement: <StandaloneAnnualIncomeStatement />,
   },
   {
     label: "Balance Sheet (₹ Cr.)",
