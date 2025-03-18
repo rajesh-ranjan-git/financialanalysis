@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Accordion from "../accordion/accordion";
 
-const ParentTabs = ({ tabData }) => {
-  const [activeTab, setActiveTab] = useState(0);
+const ParentTabs = ({ parentTabs }) => {
+  const [parentActiveTab, setParentActiveTab] = useState(0);
 
-  const handleTabChange = (currentTab) => {
-    setActiveTab(currentTab);
+  const handleTabChange = (currentParentTab) => {
+    setParentActiveTab(currentParentTab);
   };
 
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-4 w-full">
       <div className="flex gap-2">
-        {tabData && tabData.length
-          ? tabData.map((tab, index) => (
+        {parentTabs && parentTabs.length
+          ? parentTabs.map((tab, index) => (
               <div
                 className="bg-blue-200 p-1 px-2 rounded font-semibold text-white transition-all cursor-pointer smooth"
                 style={
-                  activeTab === tab.id - 1
+                  parentActiveTab === tab.id - 1
                     ? { backgroundColor: "#42A5F5" }
                     : null
                 }
@@ -28,9 +29,9 @@ const ParentTabs = ({ tabData }) => {
           : null}
       </div>
 
-      <div className="flex justify-center items-center p-2 border border-neutral-300 rounded w-[70vw] h-[60vh]">
-        {tabData[activeTab] && tabData[activeTab].content}
-      </div>
+      {parentTabs[parentActiveTab] && (
+        <Accordion parentLabel={parentTabs[parentActiveTab]} />
+      )}
     </div>
   );
 };
