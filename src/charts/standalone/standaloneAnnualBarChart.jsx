@@ -3,6 +3,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  LabelList,
   Legend,
   Tooltip,
   XAxis,
@@ -24,8 +25,20 @@ const StandaloneAnnualBarChart = () => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="Total Income" fill="#8884d8" />
-        <Bar dataKey="Reported Profit After Tax" fill="#82ca9d" />
+        <Bar dataKey="Total Income" fill="#8884d8">
+          <LabelList
+            dataKey="Total Income"
+            position="top"
+            className="font-semibold"
+          />
+        </Bar>
+        <Bar dataKey="Reported Profit After Tax" fill="#82ca9d">
+          <LabelList
+            dataKey="Reported Profit After Tax"
+            position="top"
+            className="font-semibold"
+          />
+        </Bar>
       </BarChart>
     </div>
   );

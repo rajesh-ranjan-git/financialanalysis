@@ -3,6 +3,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  LabelList,
   Legend,
   Tooltip,
   XAxis,
@@ -17,6 +18,7 @@ const StandaloneQuarterlyBarChart = () => {
         width={1000}
         height={600}
         data={standaloneQuarterlyData}
+        barGap={10}
         className="w-full"
       >
         <CartesianGrid strokeDasharray="3 3" />
@@ -24,8 +26,33 @@ const StandaloneQuarterlyBarChart = () => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="Total Income" fill="#8884d8" />
-        <Bar dataKey="Reported Profit After Tax" fill="#82ca9d" />
+        <Bar
+          dataKey="Total Income"
+          fill="#08ace4"
+          barSize={50}
+          radius={[3, 3, 0, 0]}
+        >
+          <LabelList
+            dataKey="Total Income"
+            position="top"
+            className="font-semibold"
+            fill="black"
+            color="black"
+          />
+        </Bar>
+        <Bar
+          dataKey="Reported Profit After Tax"
+          fill="#ffac74"
+          barSize={40}
+          radius={[3, 3, 0, 0]}
+        >
+          <LabelList
+            dataKey="Reported Profit After Tax"
+            position="top"
+            fill="black"
+            className="font-semibold"
+          />
+        </Bar>
       </BarChart>
     </div>
   );

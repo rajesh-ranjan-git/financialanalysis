@@ -3,6 +3,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  LabelList,
   Legend,
   Tooltip,
   XAxis,
@@ -12,7 +13,7 @@ import { consolidatedAnnualData } from "../../config/chartsData";
 
 const ConsolidatedAnnualBarChart = () => {
   return (
-    <div className="w-full">
+    <div className="w-full overscroll-contain">
       <BarChart
         width={1000}
         height={600}
@@ -25,10 +26,18 @@ const ConsolidatedAnnualBarChart = () => {
         <Tooltip />
         <Legend />
         <Bar dataKey="Total Income" fill="#8884d8">
-          <LabelList dataKey="Total Income" position="top" />
+          <LabelList
+            dataKey="Total Income"
+            position="top"
+            className="font-semibold"
+          />
         </Bar>
         <Bar dataKey="Reported Profit After Tax" fill="#82ca9d">
-          <LabelList dataKey="Total Income" position="top" />
+          <LabelList
+            dataKey="Reported Profit After Tax"
+            position="top"
+            className="font-semibold"
+          />
         </Bar>
       </BarChart>
     </div>
