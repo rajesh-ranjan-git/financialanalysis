@@ -24,8 +24,12 @@ const ConsolidatedAnnualBarChart = () => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="totalIncome" fill="#8884d8" />
-        <Bar dataKey="netProfit" fill="#82ca9d" />
+        <Bar dataKey="Total Income" fill="#8884d8">
+          <LabelList dataKey="Total Income" position="top" />
+        </Bar>
+        <Bar dataKey="Reported Profit After Tax" fill="#82ca9d">
+          <LabelList dataKey="Total Income" position="top" />
+        </Bar>
       </BarChart>
     </div>
   );
