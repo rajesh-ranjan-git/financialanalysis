@@ -42,7 +42,7 @@ const Accordion = ({ parentLabel }) => {
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <Minus />
+                <Minus strokeWidth={3} />
               </motion.div>
             ) : (
               <motion.div
@@ -54,7 +54,7 @@ const Accordion = ({ parentLabel }) => {
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <Plus />
+                <Plus strokeWidth={3} />
               </motion.div>
             )}
           </div>
