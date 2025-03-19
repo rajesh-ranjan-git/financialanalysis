@@ -10,7 +10,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { consolidatedAnnualIncomeStatement } from "../../config/chartsData";
+import { consolidatedAnnualCashFlow } from "../../config/chartsData";
 
 const ConsolidatedAnnualIncomeStatement = () => {
   return (
@@ -19,7 +19,7 @@ const ConsolidatedAnnualIncomeStatement = () => {
         <BarChart
           width={1000}
           height={600}
-          data={consolidatedAnnualIncomeStatement}
+          data={consolidatedAnnualCashFlow}
           barGap={10}
           className="w-full"
         >
@@ -29,13 +29,13 @@ const ConsolidatedAnnualIncomeStatement = () => {
           <Tooltip />
           <Legend />
           <Bar
-            dataKey="Total Income"
+            dataKey="Net Cash from Operating Activities"
             fill="#08ace4"
             barSize={50}
             radius={[3, 3, 0, 0]}
           >
             <LabelList
-              dataKey="Total Income"
+              dataKey="Net Cash from Operating Activities"
               position="top"
               className="font-semibold"
               fill="black"
@@ -43,13 +43,26 @@ const ConsolidatedAnnualIncomeStatement = () => {
             />
           </Bar>
           <Bar
-            dataKey="Reported Profit After Tax"
+            dataKey="Net Cash used in Investing Activities"
             fill="#ffac74"
             barSize={40}
             radius={[3, 3, 0, 0]}
           >
             <LabelList
-              dataKey="Reported Profit After Tax"
+              dataKey="Net Cash used in Investing Activities"
+              position="top"
+              fill="black"
+              className="font-semibold"
+            />
+          </Bar>
+          <Bar
+            dataKey="Net Cash used in Financing Activities"
+            fill="#08fc04"
+            barSize={40}
+            radius={[3, 3, 0, 0]}
+          >
+            <LabelList
+              dataKey="Net Cash used in Financing Activities"
               position="top"
               fill="black"
               className="font-semibold"

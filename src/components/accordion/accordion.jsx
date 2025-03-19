@@ -24,8 +24,9 @@ const Accordion = ({ parentLabel }) => {
         <div className="rounded-md rounded-b-none w-full" key={index}>
           <div
             className={`flex justify-between border border-neutral-300 rounded-md p-2 ${
-              acc === index && "rounded-b-none border-b-0"
-            } font-semibold text-xl cursor-pointer`}
+              acc === index &&
+              "rounded-b-none border-b-0 bg-[#e8f4fc] text-[#42A5F5]"
+            } font-bold text-xl cursor-pointer transition-all smooth`}
             onClick={() => handleAccordion(index)}
           >
             <span>{heading.label}</span>
@@ -40,10 +41,10 @@ const Accordion = ({ parentLabel }) => {
                     {childTabs && childTabs.length
                       ? childTabs.map((tab, index) => (
                           <div
-                            className="bg-blue-200 p-1 px-2 rounded font-semibold text-white transition-all cursor-pointer smooth"
+                            className="bg-blue-100/50 p-1 px-2 rounded font-semibold text-neutral-500 transition-all cursor-pointer smooth"
                             style={
                               childActiveTab === tab.id - 1
-                                ? { backgroundColor: "#42A5F5" }
+                                ? { color: "#42A5F5" }
                                 : null
                             }
                             key={tab.id}
@@ -58,28 +59,28 @@ const Accordion = ({ parentLabel }) => {
                   {parentLabel.label === "Consolidated" &&
                     childActiveTab === 0 && (
                       <div className="py-4">
-                        {heading.consolidatedQuarterlyIncomeStatement}
+                        {heading.consolidatedQuarterlyChart}
                       </div>
                     )}
 
                   {parentLabel.label === "Consolidated" &&
                     childActiveTab === 1 && (
                       <div className="py-4">
-                        {heading.consolidatedAnnualIncomeStatement}
+                        {heading.consolidatedAnnualChart}
                       </div>
                     )}
 
                   {parentLabel.label === "Standalone" &&
                     childActiveTab === 0 && (
                       <div className="py-4">
-                        {heading.standaloneQuarterlyIncomeStatement}
+                        {heading.standaloneQuarterlyChart}
                       </div>
                     )}
 
                   {parentLabel.label === "Standalone" &&
                     childActiveTab === 1 && (
                       <div className="py-4">
-                        {heading.standaloneAnnualIncomeStatement}
+                        {heading.standaloneAnnualChart}
                       </div>
                     )}
                 </div>

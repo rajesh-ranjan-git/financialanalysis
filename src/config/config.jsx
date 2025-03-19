@@ -2,6 +2,14 @@ import ConsolidatedQuarterlyIncomeStatement from "../charts/consolidated/consoli
 import ConsolidatedAnnualIncomeStatement from "../charts/consolidated/consolidatedAnnualIncomeStatement";
 import StandaloneQuarterlyIncomeStatement from "../charts/standalone/standaloneQuarterlyIncomeStatement";
 import StandaloneAnnualIncomeStatement from "../charts/standalone/standaloneAnnualIncomeStatement";
+import ConsolidatedQuarterlyBalanceSheet from "../charts/consolidated/consolidatedQuarterlyBalanceSheet";
+import ConsolidatedAnnualBalanceSheet from "../charts/consolidated/consolidatedAnnualBalanceSheet";
+import StandaloneQuarterlyBalanceSheet from "../charts/standalone/standaloneQuarterlyBalanceSheet";
+import StandaloneAnnualBalanceSheet from "../charts/standalone/standaloneAnnualBalanceSheet";
+import ConsolidatedQuarterlyCashFlow from "../charts/consolidated/consolidatedQuarterlyCashFlow";
+import ConsolidatedAnnualCashFlow from "../charts/consolidated/consolidatedAnnualCashFlow";
+import StandaloneQuarterlyCashFlow from "../charts/standalone/standaloneQuarterlyCashFlow";
+import StandaloneAnnualCashFlow from "../charts/standalone/standaloneAnnualCashFlow";
 
 export const parentTabs = [
   {
@@ -28,25 +36,23 @@ export const childTabs = [
 export const chartsData = [
   {
     label: "Income Statement (₹ Cr.)",
-    consolidatedQuarterlyIncomeStatement: (
-      <ConsolidatedQuarterlyIncomeStatement />
-    ),
-    consolidatedAnnualIncomeStatement: <ConsolidatedAnnualIncomeStatement />,
-    standaloneQuarterlyIncomeStatement: <StandaloneQuarterlyIncomeStatement />,
-    standaloneAnnualIncomeStatement: <StandaloneAnnualIncomeStatement />,
+    consolidatedQuarterlyChart: <ConsolidatedQuarterlyIncomeStatement />,
+    consolidatedAnnualChart: <ConsolidatedAnnualIncomeStatement />,
+    standaloneQuarterlyChart: <StandaloneQuarterlyIncomeStatement />,
+    standaloneAnnualChart: <StandaloneAnnualIncomeStatement />,
   },
   {
     label: "Balance Sheet (₹ Cr.)",
-    consolidatedQuarterlyChart: "Kripanidhan",
-    consolidatedAnnualChart: "Rahee",
-    standaloneQuarterlyChart: "Vingardium",
-    standaloneAnnualChart: "Laviosa",
+    consolidatedQuarterlyChart: <ConsolidatedQuarterlyBalanceSheet />,
+    consolidatedAnnualChart: <ConsolidatedAnnualBalanceSheet />,
+    standaloneQuarterlyChart: <StandaloneQuarterlyBalanceSheet />,
+    standaloneAnnualChart: <StandaloneAnnualBalanceSheet />,
   },
   {
     label: "Cash Flow  (₹ Cr.)",
-    consolidatedQuarterlyChart: "Sayantanee",
-    consolidatedAnnualChart: "Mohanta",
-    standaloneQuarterlyChart: "Expecto",
-    standaloneAnnualChart: "Patronum",
+    consolidatedQuarterlyChart: <ConsolidatedQuarterlyCashFlow />,
+    consolidatedAnnualChart: <ConsolidatedAnnualCashFlow />,
+    standaloneQuarterlyChart: <StandaloneQuarterlyCashFlow />,
+    standaloneAnnualChart: <StandaloneAnnualCashFlow />,
   },
 ];

@@ -10,7 +10,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { consolidatedAnnualIncomeStatement } from "../../config/chartsData";
+import { consolidatedAnnualBalanceSheet } from "../../config/chartsData";
 
 const ConsolidatedAnnualIncomeStatement = () => {
   return (
@@ -19,7 +19,7 @@ const ConsolidatedAnnualIncomeStatement = () => {
         <BarChart
           width={1000}
           height={600}
-          data={consolidatedAnnualIncomeStatement}
+          data={consolidatedAnnualBalanceSheet}
           barGap={10}
           className="w-full"
         >
@@ -29,13 +29,13 @@ const ConsolidatedAnnualIncomeStatement = () => {
           <Tooltip />
           <Legend />
           <Bar
-            dataKey="Total Income"
+            dataKey="Total Assets"
             fill="#08ace4"
             barSize={50}
             radius={[3, 3, 0, 0]}
           >
             <LabelList
-              dataKey="Total Income"
+              dataKey="Total Assets"
               position="top"
               className="font-semibold"
               fill="black"
@@ -43,13 +43,13 @@ const ConsolidatedAnnualIncomeStatement = () => {
             />
           </Bar>
           <Bar
-            dataKey="Reported Profit After Tax"
+            dataKey="Total Shareholder's Funds"
             fill="#ffac74"
             barSize={40}
             radius={[3, 3, 0, 0]}
           >
             <LabelList
-              dataKey="Reported Profit After Tax"
+              dataKey="Total Shareholder's Funds"
               position="top"
               fill="black"
               className="font-semibold"

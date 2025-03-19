@@ -94,60 +94,60 @@ export const consolidatedQuarterlyBalanceSheet = [
   {
     quarter: "Dec 2024",
     "Total Assets": 5000,
-    "Total Shareholder's Fund": 2000,
+    "Total Shareholder's Funds": 2000,
   },
   {
     quarter: "Sep 2024",
     "Total Assets": 5200,
-    "Total Shareholder's Fund": 2100,
+    "Total Shareholder's Funds": 2100,
   },
   {
     quarter: "Jun 2024",
     "Total Assets": 5400,
-    "Total Shareholder's Fund": 2200,
+    "Total Shareholder's Funds": 2200,
   },
   {
     quarter: "Mar 2024",
     "Total Assets": 5600,
-    "Total Shareholder's Fund": 2300,
+    "Total Shareholder's Funds": 2300,
   },
 ];
 
 export const consolidatedAnnualBalanceSheet = [
-  { year: "2022", "Total Assets": 20000, "Total Shareholder's Fund": 8000 },
-  { year: "2023", "Total Assets": 22000, "Total Shareholder's Fund": 9000 },
-  { year: "2024", "Total Assets": 25000, "Total Shareholder's Fund": 10000 },
-  { year: "2025", "Total Assets": 28000, "Total Shareholder's Fund": 12000 },
+  { year: "2022", "Total Assets": 20000, "Total Shareholder's Funds": 8000 },
+  { year: "2023", "Total Assets": 22000, "Total Shareholder's Funds": 9000 },
+  { year: "2024", "Total Assets": 25000, "Total Shareholder's Funds": 10000 },
+  { year: "2025", "Total Assets": 28000, "Total Shareholder's Funds": 12000 },
 ];
 
 export const standaloneQuarterlyBalanceSheet = [
   {
     quarter: "Dec 2024",
     "Total Assets": 5000,
-    "Total Shareholder's Fund": 2000,
+    "Total Shareholder's Funds": 2000,
   },
   {
     quarter: "Sep 2024",
     "Total Assets": 5200,
-    "Total Shareholder's Fund": 2100,
+    "Total Shareholder's Funds": 2100,
   },
   {
     quarter: "Jun 2024",
     "Total Assets": 5400,
-    "Total Shareholder's Fund": 2200,
+    "Total Shareholder's Funds": 2200,
   },
   {
     quarter: "Mar 2024",
     "Total Assets": 5600,
-    "Total Shareholder's Fund": 2300,
+    "Total Shareholder's Funds": 2300,
   },
 ];
 
 export const standaloneAnnualBalanceSheet = [
-  { year: "2022", "Total Assets": 20000, "Total Shareholder's Fund": 8000 },
-  { year: "2023", "Total Assets": 22000, "Total Shareholder's Fund": 9000 },
-  { year: "2024", "Total Assets": 25000, "Total Shareholder's Fund": 10000 },
-  { year: "2025", "Total Assets": 28000, "Total Shareholder's Fund": 12000 },
+  { year: "2022", "Total Assets": 20000, "Total Shareholder's Funds": 8000 },
+  { year: "2023", "Total Assets": 22000, "Total Shareholder's Funds": 9000 },
+  { year: "2024", "Total Assets": 25000, "Total Shareholder's Funds": 10000 },
+  { year: "2025", "Total Assets": 28000, "Total Shareholder's Funds": 12000 },
 ];
 
 export const consolidatedQuarterlyCashFlow = [
