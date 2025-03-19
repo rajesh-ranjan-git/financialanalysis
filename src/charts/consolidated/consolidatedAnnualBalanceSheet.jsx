@@ -11,6 +11,7 @@ import {
   YAxis,
 } from "recharts";
 import { consolidatedAnnualBalanceSheet } from "../../config/chartsData";
+import { formatYAxis, renderLegend } from "../../utility/chartUtility";
 
 const ConsolidatedAnnualIncomeStatement = () => {
   return (
@@ -23,11 +24,11 @@ const ConsolidatedAnnualIncomeStatement = () => {
           barGap={10}
           className="w-full"
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 0" opacity={0.5} vertical={false} />
           <XAxis dataKey="quarter" />
-          <YAxis />
+          <YAxis axisLine={false} tickFormatter={formatYAxis} />
           <Tooltip />
-          <Legend />
+          <Legend content={renderLegend} />
           <Bar
             dataKey="Total Assets"
             fill="#08ace4"
@@ -45,14 +46,15 @@ const ConsolidatedAnnualIncomeStatement = () => {
           <Bar
             dataKey="Total Shareholder's Funds"
             fill="#ffac74"
-            barSize={40}
+            barSize={50}
             radius={[3, 3, 0, 0]}
           >
             <LabelList
               dataKey="Total Shareholder's Funds"
               position="top"
-              fill="black"
               className="font-semibold"
+              fill="black"
+              color="black"
             />
           </Bar>
         </BarChart>

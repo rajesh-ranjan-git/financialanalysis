@@ -11,6 +11,7 @@ import {
   YAxis,
 } from "recharts";
 import { standaloneAnnualCashFlow } from "../../config/chartsData";
+import { formatYAxis, renderLegend } from "../../utility/chartUtility";
 
 const StandaloneAnnualCashFlow = () => {
   return (
@@ -23,11 +24,11 @@ const StandaloneAnnualCashFlow = () => {
           barGap={10}
           className="w-full"
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 0" opacity={0.5} vertical={false} />
           <XAxis dataKey="quarter" />
-          <YAxis />
+          <YAxis axisLine={false} tickFormatter={formatYAxis} />
           <Tooltip />
-          <Legend />
+          <Legend content={renderLegend} />
           <Bar
             dataKey="Net Cash from Operating Activities"
             fill="#08ace4"
