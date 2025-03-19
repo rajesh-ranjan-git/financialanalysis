@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Minus, Plus } from "lucide-react";
+import { motion } from "framer-motion";
 import { chartsData, childTabs } from "../../config/config";
 
 const Accordion = ({ parentLabel }) => {
@@ -30,11 +31,42 @@ const Accordion = ({ parentLabel }) => {
             onClick={() => handleAccordion(index)}
           >
             <span>{heading.label}</span>
-            {acc === index ? <Minus /> : <Plus />}
+
+            {acc === index ? (
+              <motion.div
+                initial={{
+                  rotate: acc === index ? -90 : 0,
+                }}
+                animate={{
+                  rotate: acc === index ? 0 : -90,
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <Minus />
+              </motion.div>
+            ) : (
+              <motion.div
+                initial={{
+                  rotate: acc === index ? -90 : 0,
+                }}
+                animate={{
+                  rotate: acc === index ? 0 : -90,
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <Plus />
+              </motion.div>
+            )}
           </div>
 
           {acc === index && (
-            <div className="flex flex-col space-y-4 w-full">
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "645px" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="flex flex-col space-y-4 w-full"
+            >
               {childTabs[childActiveTab] && (
                 <div className="flex flex-col justify-between p-4 border border-neutral-300 rounded-md rounded-t-none">
                   <div className="flex gap-2">
@@ -85,7 +117,7 @@ const Accordion = ({ parentLabel }) => {
                     )}
                 </div>
               )}
-            </div>
+            </motion.div>
           )}
         </div>
       ))}
