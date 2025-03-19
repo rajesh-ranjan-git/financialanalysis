@@ -10,16 +10,16 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { standaloneAnnualIncomeStatement } from "../../config/chartsData";
+import { standaloneAnnualBalanceSheet } from "../../config/chartsData";
 
-const StandaloneAnnualIncomeStatement = () => {
+const StandaloneAnnualBalanceSheet = () => {
   return (
     <div className="w-full h-[60vh]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={1000}
           height={600}
-          data={standaloneAnnualIncomeStatement}
+          data={standaloneAnnualBalanceSheet}
           barGap={10}
           className="w-full"
         >
@@ -29,13 +29,13 @@ const StandaloneAnnualIncomeStatement = () => {
           <Tooltip />
           <Legend />
           <Bar
-            dataKey="Total Income"
+            dataKey="Total Assets"
             fill="#08ace4"
             barSize={50}
             radius={[3, 3, 0, 0]}
           >
             <LabelList
-              dataKey="Total Income"
+              dataKey="Total Assets"
               position="top"
               className="font-semibold"
               fill="black"
@@ -43,13 +43,13 @@ const StandaloneAnnualIncomeStatement = () => {
             />
           </Bar>
           <Bar
-            dataKey="Reported Profit After Tax"
+            dataKey="Total Shareholder's Funds"
             fill="#ffac74"
             barSize={40}
             radius={[3, 3, 0, 0]}
           >
             <LabelList
-              dataKey="Reported Profit After Tax"
+              dataKey="Total Shareholder's Funds"
               position="top"
               fill="black"
               className="font-semibold"
@@ -61,4 +61,4 @@ const StandaloneAnnualIncomeStatement = () => {
   );
 };
 
-export default StandaloneAnnualIncomeStatement;
+export default StandaloneAnnualBalanceSheet;
